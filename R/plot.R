@@ -179,7 +179,7 @@ plotScoreLandscape <- function(scoredf1, scoredf2, scorenames = c(),
             rownames(scoredf1) == rownames(scoredf2))
   
   if (length(scorenames) == 0){
-    scorenames = c('Signature 1', 'Signature 2')
+    scorenames = c("Signature 1", "Signature 2")
   }
   plotdf = data.frame(scoredf1$TotalScore, scoredf2$TotalScore)
   colnames(plotdf) = scorenames
@@ -323,10 +323,12 @@ projectScoreLandscape <- function(plotObj = NULL,
   
   
   plabs = c(plotObj$labels$x, plotObj$labels$y)
+  # Remove back proporgate 
+  plabs = gsub("`","",plabs)
   Annotation <- NULL
   SampleLabel <- NULL
   colnames(newdata) = c(plabs, 'SampleLabel')
-  newdata[, 'Annotation'] = as.factor(annot) #need to make it work for factor
+  newdata$Annotation= as.factor(annot) #need to make it work for factor
   
   #need to deal with legends in both interactive and non-interactive
   if (!isInteractive) {

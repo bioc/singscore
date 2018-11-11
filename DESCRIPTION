@@ -1,14 +1,14 @@
 Package: singscore
 Type: Package
 Title: Rank-based single-sample gene set scoring method
-Version: 1.2.1
+Version: 1.2.2
 Authors@R: c(person("Momeneh", "Foroutan", email = "foroutan.m@wehi.edu.au", role = c("aut", "ctb")),
            person("Dharmesh","Bhuva", email = "bhuva.d@wehi.edu.au", role = c("aut", "ctb")),
            person("Ruqian","Lyu", email = "ruqianl@student.unimelb.edu.au", role = c("aut", "cre")))
 Description: A simple single-sample gene signature scoring method that uses rank-based 
   statistics to analyze the sample's gene expression profile. It scores the expression activities of 
   gene sets at a single-sample level.
-biocViews: Software, GeneExpression, GeneSetEnrichment
+biocViews: Software, GeneExpression, GeneSetEnrichment,GO,KEGG,GraphAndNetwork
 Depends: R (>= 3.5),GSEABase
 Imports:
     methods,
@@ -32,7 +32,7 @@ Imports:
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
 Collate: 
     'singscore.R'
